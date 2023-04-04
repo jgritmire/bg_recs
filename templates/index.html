@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <title> Board Game Recommender</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+  </head>
+  <body>
+      <img src="https://media.istockphoto.com/id/1006433016/vector/red-meeple-vector-illustration.jpg?s=612x612&w=0&k=20&c=rca3nGwuthDUVzwITAtb8iAFrFfYNpcE7aQOi_dhPFc=">
+      <p> Hello there! </p>
+      <br>
+      <form action="greet" method="post">
+        {% for message in get_flashed_messages()%}
+          <p> {{message}} </p>
+        {% endfor %}
+
+      <br>
+      <input type="text" name="game_input">
+      <br>
+      <input type="submit" value="Get Recommendations!" id="greet">
+      </form>
+  <body/>
+</html>
